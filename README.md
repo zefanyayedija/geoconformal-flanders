@@ -58,14 +58,13 @@ map actually represents.
 
 - `Mini_Research_Project.ipynb` — full analysis (data prep → modeling → uncertainty)
 - `figures/` — sample distribution and reliability map
-- Raw rasters and the ERA5 retrieval file are not included (sources documented in the notebook)
+- `retrieval/` — data retrieval scripts (Google Earth Engine + Copernicus CDS)
 
 ## How to run
 
-The notebook runs top-to-bottom in Google Colab. Input rasters and the ERA5 file are
-expected in a Google Drive folder (`BASE` path set at the top of the notebook). Data
-retrieval (Google Earth Engine + Copernicus CDS) is documented in the notebook header.
-The `geoconformal` package is installed in Phase 3.
+Reproduce in three steps: (1) run `retrieval/01_gee_lst_ndvi_dem.js` in the GEE Code
+Editor to export the raster; (2) run `retrieval/02_cds_era5_t2m.ipynb` to download
+ERA5-Land T2m; (3) run `Mini_Research_Project.ipynb` for the full analysis.
 
 ## References
 
